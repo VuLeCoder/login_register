@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="lr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body id="body">
+    <div class="center">
+        <div id="login" class="login">
+            <header>
+                <p id="login_title"></p>
+            </header>
+
+            <form class="content">
+                <label class="input_box">
+                    <span><icon class="fa fa-user"></icon></span>
+                    <input id="user_field" type="text" placeholder="User name">
+                </label>
+                <label class="input_box">
+                    <button class="show_hide" onclick="show_hide_pass()"><icon id="eye" class="far fa-eye"></icon></button>
+                    <span><icon class="fa fa-lock"></icon></span>
+                    <input id="password_field" type="password" placeholder="Password">
+                </label>
+
+                <div class="login_with">
+                    <a href="#" class="login_box"><icon class="fab fa-facebook"></icon></a>
+                    <a href="#" class="login_box"><icon class="fab fa-google"></icon></a>
+                    <a href="#" class="login_box"><icon class="fab fa-linkedin"></icon></a>
+                    <a href="#" class="login_box"><icon class="fab fa-apple"></icon></a>
+
+                    <!-- <span class="login_box"><a href="#">q</a></span> -->
+
+                </div>
+                <label class="check_box">
+                    <input type="checkbox" style="display: none;">
+                    <span></span> 
+                    Stay sign in 30 days
+                </label>
+                <button class="body_btn" onclick="login_submit()">Login</button>
+            </form>
+        </div>
+
+        <div id="register" class="register" style="display: none;">
+            <header>
+                <p id="register_title"></p>
+            </header>
+
+            <form class="content">
+                <label class="input_box">
+                    <span><icon class="fa fa-user"></icon></span>
+                    <input id="user_field_2" type="text" placeholder="User name">
+                </label>
+                <label class="input_box">
+                    <span><icon class="fa fa-lock"></icon></span>
+                    <button class="show_hide_2" onclick="show_hide_pass_2()"><icon id="eye_2" class="far fa-eye"></icon></button>
+                    <input id="password_field_2" type="password" placeholder="Password">
+                </label>
+                <label class="input_box">
+                    <span><icon class="fa fa-lock"></icon></span>
+                    <button class="show_hide_2" onclick="show_hide_pass_3()"><icon id="eye_3" class="far fa-eye"></icon></button>
+                    <input id="password_field_3" type="password" placeholder="Confirm password">
+                </label>
+                <button class="body_btn" style="margin: 10px;" onclick="register_submit(event)">Register</button>
+            </form>
+        </div>
+
+        <div id="introduce" class="introduce_login">
+            <div id="go_to_register_page">
+                <header>
+                    <h3 style="text-align: center;">Wellcome to</h3>
+                    <img src="/Btl/jpg-png/download.png" style="border-radius: 50%; width: 50px;height: 50px;">
+                </header>
+                <h2 style="text-align: center; color: whitesmoke;">You don't have an account</h2>
+                <button onclick="go_to_register()"> Register <icon class="fa fa-caret-right"></icon></button>
+            </div>
+
+            <div id="go_to_login_page" style="display: none;">
+                <header>
+                    <h3 style="text-align: center;">Wellcome to</h3>
+                    <img src="/Btl/jpg-png/download.png" style="border-radius: 50%; width: 50px;height: 50px;">
+                </header>
+                <h2 style="text-align: center; color: whitesmoke;">You have an account</h2>
+                <button onclick="go_to_login()">Login <icon class="fa fa-caret-left"></icon> </button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="lr.js"></script>
+</body>

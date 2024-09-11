@@ -1,0 +1,379 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+body{
+    background-image: linear-gradient(to right, #ffcaca, #b6a9f9);
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+
+.center{
+    background-color: rgba(245, 245, 245, 0.382);
+    width: 50%;
+    height: 80%;
+    border-radius: 20px;
+
+    box-shadow: 10px 10px 5px #b6a9f9;
+}
+
+
+.login{
+    background-color: transparent;
+    width: 70%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    float: left;
+    flex-direction: column;
+}
+.login header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20%;
+    width: 100%;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    box-shadow: 2px 15px 20px #b6a9f9;
+}
+
+
+.register{
+    flex-direction: column;
+    background-color: transparent;
+    width: 70%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    float: right;
+}
+.register header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20%;
+    width: 100%;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    box-shadow: 2px 15px 20px #b6a9f9;
+}
+
+
+.content{
+    background-color: transparent;
+    margin-top: 20px;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_box{
+    margin: 10px;
+    width: 70%;
+    height: 50px;
+}
+.input_box input{
+    border: none;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 20px 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.input_box span, .show_hide, .show_hide_2{
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    color: #b4a9f9;
+}
+.input_box .show_hide{
+    border: none;
+    background-color: transparent;
+    right: 45.3%;
+}
+.input_box .show_hide_2{
+    border: none;
+    background-color: transparent;
+    right: 30.5%;
+}
+
+.login_with{
+    width: 70%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login_box{
+    width: 20%;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.check_box{
+    padding: 5px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    color: #02080a;
+    font-size: 14px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.content .check_box span{
+    background-color: whitesmoke;
+    height: 12px;
+    width: 12px;
+    border-radius: 1px;
+    margin-right: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .check_box:hover input ~ span{
+    background-color: #ffcaca;
+} */
+.content span::after{
+    content: "";
+    display: none;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    border-radius: 1px;
+    transform: rotate(45deg);
+}
+.content input:checked ~ span{
+    background-color: #b4a9f9;
+}
+.content input:checked ~ span::after{
+    display: flex;
+}
+
+.body_btn{
+    height: 50px;
+    width: 70%;
+    border-radius: 20px;
+    border: 2px solid #b4a9f9;
+    font-size: 20px;
+    font-weight: 600;
+    color: #b4a9f9;
+}
+
+.body_btn:hover{
+    background-color: #b4a9f9;
+    color: whitesmoke;
+}
+
+
+.introduce_login, .introduce_register{
+    position: absolute;
+    width: 15%;
+    height: 80%;
+    transition: 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduce_login{
+    background-color: #ffcaca;
+    right: 25%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.introduce_register{
+    background-color: #b4a9f9;
+    left: 25%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.introduce_expand{
+    width: 50%;
+    height: 80%;
+    border-radius: 20px;
+}
+
+
+#go_to_register_page{
+    width: 70%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#go_to_register_page header{
+    height: 40%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#go_to_register_page button{
+    background-color: transparent;
+    border: none;
+    width: 90%;
+    height: 10%;
+    margin-top: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#go_to_register_page button:active{
+    box-shadow: 4px 4px 2px #b4a9f9 inset;
+    border-radius: 10px;
+}
+#go_to_register_page button:hover{
+    background-color: #b4a9f9;
+    border-radius: 10px;
+}
+
+
+#go_to_login_page{
+    width: 70%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+#go_to_login_page header{
+    height: 40%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#go_to_login_page button{
+    background-color: transparent;
+    border: none;
+    width: 90%;
+    height: 10%;
+    margin-top: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#go_to_login_page button:active{
+    box-shadow: 4px 4px 2px #ffcaca inset;
+    border-radius: 10px;
+}
+#go_to_login_page button:hover{
+    background-color: #ffcaca;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1099px)
+{
+    .center{
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 60%;
+        height: 70%;
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login{
+        background-color: aqua;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .register{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        transform: rotateY(180deg);
+    }
+}
