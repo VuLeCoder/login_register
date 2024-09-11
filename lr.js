@@ -1,4 +1,4 @@
-var login_title = "Wellcome back 😘";
+var login_title = "Welcome back 😘";
 var login = document.getElementById('login_title');
 var i=0;
 var type_login;
